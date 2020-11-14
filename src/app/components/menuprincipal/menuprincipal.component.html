@@ -1,0 +1,55 @@
+<!-- <label>Opciones:</label>
+<select class="form-control" [(ngModel)]="categoria">
+    <option value="">Todos</option>
+    <option>Primero</option>
+    <option>Segundo</option>
+    <option>Postre</option>
+</select> -->
+<hr/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of getPlatos() | filtroCat: categoria">
+            <td>{{p.nombre}}</td>
+            <td>{{p.category}}</td>
+            <td><a [routerLink]="['/detalles/',p.id, p.nombre, p.price, p.category]">Detalles</a></td>
+        </tr>
+    </tbody>
+</table>
+<hr/>
+<h3>Insertar nuevo plato</h3>
+<form class="form-group" (ngSubmit)="addPlato(newPlato)">
+    <label>Id:</label>
+    <input type="number"
+    class="form-control"
+    name="id"
+    [(ngModel)]="newPlato.id"/>
+    <br/>
+    <label>Nombre:</label>
+    <input type="text"
+    class="form-control"
+    name="nombre"
+    [(ngModel)]="newPlato.nombre"/>
+    <br/>
+    <label>Precio:</label>
+    <input type="number"
+    class="form-control"
+    name="price"
+    [(ngModel)]="newPlato.price"/>
+    <br/>
+    <label>Categoria:</label>
+    <select 
+    class="form-control"
+    name="category"
+    [(ngModel)]="newPlato.category">
+        <option *ngFor="let n of getPlatos()">{{n.category}}</option>
+    </select>
+    <br/>
+    <button class="btn btn-warning">Insertar</button>
+</form>

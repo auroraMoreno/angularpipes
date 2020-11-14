@@ -1,0 +1,22 @@
+<h3>Detalles de: {{plato.nombre}} </h3>
+<div class="border border-info rounded">
+    <table>
+        <tr>
+            <td>Nombre: </td>
+            <td>{{plato.nombre}}</td>
+        </tr>
+        <tr>
+            <td>Precio: </td>
+            <td>{{plato.price}} € </td>
+        </tr>
+        <tr>
+            <td>Categoria</td>
+            <td>{{plato.category}}</td>
+        </tr>
+        <tr><td>{{mensaje | currency:"GBP":"£"}}</td></tr>
+        <!-- <tr>
+            <td><button class="btn btn-info" (click)="convertToPounds(plato.price)">Convertir a libras</button></td>
+            <td><button class="btn btn-info" (click)="convertToDolars(plato.price)">Convertir a dólares</button></td>
+        </tr> -->
+    </table>
+</div>
