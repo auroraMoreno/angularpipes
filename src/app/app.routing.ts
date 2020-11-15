@@ -4,7 +4,7 @@ import {DetallesComponent} from './components/detalles/detalles.component';
 
 
 const appRoutes: Routes=[
-    {path:"detalles/:id/:nombre/:price/:category", component:DetallesComponent},
+    {path:"detalles/:id/:nombre/:price/:category/:img", component:DetallesComponent},
 ]
 
 export const appRoutingProviders: any[] = [];

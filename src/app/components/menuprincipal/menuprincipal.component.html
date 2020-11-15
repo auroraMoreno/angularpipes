@@ -1,10 +1,10 @@
-<!-- <label>Opciones:</label>
+<label>Opciones:</label>
 <select class="form-control" [(ngModel)]="categoria">
     <option value="">Todos</option>
     <option>Primero</option>
     <option>Segundo</option>
     <option>Postre</option>
-</select> -->
+</select>
 <hr/>
 <table class="table table-striped">
     <thead>
@@ -18,7 +18,7 @@
         <tr *ngFor="let p of getPlatos() | filtroCat: categoria">
             <td>{{p.nombre}}</td>
             <td>{{p.category}}</td>
-            <td><a [routerLink]="['/detalles/',p.id, p.nombre, p.price, p.category]">Detalles</a></td>
+            <td><a [routerLink]="['/detalles/',p.id, p.nombre, p.price, p.category,p.img]">Detalles</a></td>
         </tr>
     </tbody>
 </table>
@@ -48,8 +48,15 @@
     class="form-control"
     name="category"
     [(ngModel)]="newPlato.category">
-        <option *ngFor="let n of getPlatos()">{{n.category}}</option>
+    <option>Primero</option>
+    <option>Segundo</option>
+    <option>Postre</option>
     </select>
     <br/>
+    <label>Imagen</label>
+    <input type="string"
+    class="form-control"
+    name="img"
+    [(ngModel)]="newPlato.img"/>
     <button class="btn btn-warning">Insertar</button>
 </form>

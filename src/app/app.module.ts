@@ -8,13 +8,15 @@ import { MenuprincipalComponent } from './../app/components/menuprincipal/menupr
 import { DetallesComponent } from './components/detalles/detalles.component';
 
 import {FiltroCategoria} from './filtroCategoria.pipe';
+import { ConversorALibras } from './conversorALibras.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuprincipalComponent,
     DetallesComponent,
-    FiltroCategoria
+    FiltroCategoria,
+    ConversorALibras
   ],
   imports: [
     BrowserModule, 
