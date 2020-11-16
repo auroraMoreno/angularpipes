@@ -27,10 +27,6 @@ export class DetallesComponent implements OnInit {
     this.mensaje = this.conversorLibras.transform(precio);
   }
 
-  // convertToDolars(precio){
-  //   this.mensaje=this.conversorDolares.transform(precio);
-  // }
-
 
   ngOnInit(): void {
     this._activeRoute.params.subscribe((params:Params)=>{
@@ -49,5 +45,3 @@ export class DetallesComponent implements OnInit {
 
 }
 
-//private conversorLibras:ConversorALibras,
-//private conversorDolares:ConversorADolares

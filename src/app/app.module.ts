@@ -10,6 +10,7 @@ import { DetallesComponent } from './components/detalles/detalles.component';
 import {FiltroCategoria} from './filtroCategoria.pipe';
 import { ConversorALibras } from './conversorALibras.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
